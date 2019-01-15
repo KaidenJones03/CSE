@@ -19,4 +19,9 @@ colors.pop(0)
 print(colors)
 print(len(colors))
 
+import string
+print(list(string.ascii_letters))
+print(string.digits)
+print(string.punctuation)
+
 

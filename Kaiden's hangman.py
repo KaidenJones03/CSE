@@ -3,8 +3,11 @@ wordBank = ["Violin", "Banjo", "Guitar", "Ukulele", "Drums", "Piano", "Accordion
 Guesses = 8
 word = random.choice(wordBank)
 guess = input
-print("Welcome to Hangman!") m
-guess(input)
-if guess =:false
-Guesses = -1
-else guess == true
+
+print("Welcome to Hangman!")
+print("Pick a letter")
+print(word)
+
+guess = input
+letters =
+letters.append(input)
