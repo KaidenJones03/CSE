@@ -6,10 +6,10 @@ letters = []
 
 print("Welcome to Hangman!")
 print("Pick a letter")
-print(word)
+# print(word)
 list_of_letters_in_word = list(word)
-
-print(hidden_word)
+hidden_word = list("*" * len(list_of_letters_in_word))
+# print(hidden_word)
 
 while Guesses > 0:
     print("".join(hidden_word))
@@ -28,5 +28,8 @@ while Guesses > 0:
         print("Wrong")
     print(Guesses)
 
-    if Guesses < 0:
+    if Guesses <= 0:
         print("Game Over")
+
+    elif guess == (len(word)):
+        print("you win")
