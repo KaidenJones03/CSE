@@ -1,5 +1,5 @@
 import random
-wordBank = ["Violin", "Banjo", "Guitar", "Ukulele", "Drums", "Piano", "Accordion", "Flute", "Clarinet", "Trumpet"]
+wordBank = ["Dog", "Cat", "Fish", "Turtle", "Lizard", "Hamster", "Chicken", "Pig", "Tiger", "Iguana", ]
 Guesses = 8
 word = random.choice(wordBank)
 letters = []
@@ -31,5 +31,6 @@ while Guesses > 0:
     if Guesses <= 0:
         print("Game Over")
 
-    elif guess == (len(word)):
+    elif hidden_word == list_of_letters_in_word:
         print("you win")
+    print(hidden_word)
