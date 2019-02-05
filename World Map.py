@@ -29,7 +29,8 @@ while playing:
     if command.lower() in ['q', 'quit' 'exit']:
         playing = False
     elif command.upper() in directions:
-        room_name = current_node['PATHS'][command.upper()]
+        try:
+            room_name = current_node['PATHS'][command.upper()]
         current_node = world_map[room_name]
         except KeyError:
         print("I cant go that way")
