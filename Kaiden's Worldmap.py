@@ -9,7 +9,7 @@ world_map = {
         }
     },
     'RETAIL ROW': {
-        'NAME': "RETAIL ROw",
+        'NAME': "RETAIL ROW",
         'DESCRIPTION': "You are at retail row. if you go south you will be at Paradise Palm"
                        "If you go north you will reach tomato temple",
         'PATHS': {
@@ -26,11 +26,39 @@ world_map = {
             'NORTH': "RETAIL ROW",
             'WEST': "FATAL FIELDS"
 
+        }
+    },
+            
+    'TOMATO TEMPLE': {
+        'NAME': "TOMATO TEMPLE",
+        'DESCRIPTION': "You are at Tomato Temple. This place was a religious sanctuary for tomatoes"
+                       "You can either go east to wailing woods, north to the block, or west to lazy links"    
+        'PATHS': {
+            'NORTH': "THE BLOCK",
+            'WEST': "LAZY LINKS",
+            'EAST': "WAILING WOODS"
 
 
+        }
+    },
 
 
+playing = True
+current_node = world_map['Battle Bus']
+directions = ['NORTH', 'SOUTH', 'EAST', 'WEST', 'UP', 'DOWN']
 
-        },
 
-    }
+while playing:
+    print(current_node['NAME'])
+    print(current_node['DESCRIPTION'])
+    command = input(">_")
+    if command.lower() in ['q', 'quit' 'exit']:
+        playing = False
+    elif command.upper() in directions:
+        try:
+            room_name = current_node['PATHS'][command.upper()]
+        current_node = world_map[room_name]
+        except KeyError:
+        print("I cant go that way")
+    else:
+        print("Command Not Found")
