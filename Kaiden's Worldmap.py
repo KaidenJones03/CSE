@@ -28,11 +28,10 @@ world_map = {
 
         }
     },
-            
     'TOMATO TEMPLE': {
         'NAME': "TOMATO TEMPLE",
         'DESCRIPTION': "You are at Tomato Temple. This place was a religious sanctuary for tomatoes"
-                       "You can either go east to wailing woods, north to the block, or west to lazy links"    
+                       "You can either go east to wailing woods, north to the block, or west to lazy links",
         'PATHS': {
             'NORTH': "THE BLOCK",
             'WEST': "LAZY LINKS",
@@ -41,7 +40,21 @@ world_map = {
 
         }
     },
+    'LAZY LINKS': {
+        'NAME': "LAZY LINKS",
+        'DESCRIPTION': "You are at Lazy Links. This place has a mansion and alot of golf course"
+                       "You can either go west to pleasant park, or east to the block",
+        'PATHS': {
+            'WEST': "PLEASANT PARK",
+            'EAST': "THE BLOCK"
 
+        }
+    },
+    'PLEASANT PARK': {
+        'NAME': "PLEASANT PARK",
+        'DESCRIPTION':"You are at Pleasant Park. This place is a nice park but isnt pleasant"
+                      ""
+}
 
 playing = True
 current_node = world_map['Battle Bus']
