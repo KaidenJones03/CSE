@@ -53,8 +53,65 @@ world_map = {
     'PLEASANT PARK': {
         'NAME': "PLEASANT PARK",
         'DESCRIPTION':"You are at Pleasant Park. This place is a nice park but isnt pleasant"
-                      ""
+                      "You can go North to junk junction, or south to viking mountain",
+        'PATHS': {
+            'NORTH':"JUNK JUNCTION",
+            'SOUTH':"VIKING MOUNTAIN"
+        }
+    },
+    'JUNK JUNCTION': {
+        'NAME':"JUNK JUNCTION",
+        'DESCRIPTION':"You are at junk junction.This place is a trash dump and smells really bad"
+                      "You can either go south to Pleasant park or east to lazy links",
+        'PATHS': {
+            'SOUTH':"PLEASANT PARK",
+            'EAST':"LAZY LINKS"
+        }
+    },
+    'THE BLOCK': {
+        'NAME':"THE BLOCK",
+        'DESCRIPTION':"You are at the block.This place is updated every week with player creations"
+                      "You can go south to Wailing Woods,or west to lazy links",
+        'PATHS': {
+            'SOUTH':"WAILING WOODS",
+            'WEST':"LAZY LINKS"
+        }
+    },
+    'WAILING WOODS': {
+        'NAME':"WAILING WOODS",
+        'DESCRIPTION': "You are at Wailing Woods.This place is a calm forest"
+                       "You can go south to retail row or west to tomato temple",
+        'PATHS': {
+            'SOUTH':"RETAIL ROW",
+            'WEST':"TOMATO TEMPLE"
+        }
+    },
+    'FATAL FIELDS': {
+    'NAME':"FATAL FIELDS",
+    'DESCRIPTION': "You are at Fatal FIelds. This place is a nice little farm ranch"
+                   "You can west to happy hamlet or north to salty springs",
+    'PATHS': {
+        'WEST':"HAPPY HAMLET",
+        'NORTH':"SALTY SPRINGS"
+        }
+    },
+    'HAPPY HAMLET': {
+        'NAME':"HAPPY HAMLET",
+        'DESCRIPTION':"You are at happy hamlet. Its really cold here but there is a small town"
+                      "You can either go west to frosty flights or north to tilted towers",
+        'PATHS': {
+            'WEST':"FROSTY FLIGHTS",
+            'NORTH':"TILTED TOWERS"
+        }
+    },
+
+
+
+
+
+
 }
+
 
 playing = True
 current_node = world_map['Battle Bus']
