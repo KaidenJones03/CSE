@@ -87,13 +87,13 @@ world_map = {
         }
     },
     'FATAL FIELDS': {
-    'NAME':"FATAL FIELDS",
-    'DESCRIPTION': "You are at Fatal FIelds. This place is a nice little farm ranch"
-                   "You can west to happy hamlet or north to salty springs",
-    'PATHS': {
-        'WEST':"HAPPY HAMLET",
-        'NORTH':"SALTY SPRINGS"
-        }
+        'NAME':"FATAL FIELDS",
+        'DESCRIPTION': "You are at Fatal FIelds. This place is a nice little farm ranch"
+                       "You can west to happy hamlet or north to salty springs",
+        'PATHS': {
+            'WEST':"HAPPY HAMLET",
+            'NORTH':"SALTY SPRINGS"
+            }
     },
     'HAPPY HAMLET': {
         'NAME':"HAPPY HAMLET",
@@ -104,10 +104,46 @@ world_map = {
             'NORTH':"TILTED TOWERS"
         }
     },
-
-
-
-
+    'FROSTY FLIGHTS': {
+        'NAME':"FROSTY FLIGHTS",
+        'DESCRIPTION':"You are at frosty flights. There are a few airplane hangars"
+                      "You can either go north to viking mountain or east to happy hamlet",
+        'PATHS': {
+            'EAST':"HAPPY HAMLET",
+            'NORTH':"VIKING MOUNTAIN"
+        }
+    },
+    'VIKING MOUNTAIN': {
+        'NAME': "VIKING MOUNTAIN",
+        'DESCRIPTION': "You are at Viking Mountain. This is a lost viking camp on a mountain"
+                      "You can either go east to tilted towers, west to snobby shores, north to pleasant park"
+                      "or south to frosty flights",
+        'PATHS': {
+            'EAST': "TILTED TOWERS",
+            'WEST': "SNOBBY SHORES",
+            'NORTH': "PLEASANT PARK"
+        }
+    },
+    'TILTED TOWERS': {
+        'NAME': "TILTED TOWERS",
+        'DESCRIPTION': "You are at Tilted towers. this place is the biggest city on the map"
+                      "You can go north to pleasant park,west to viking mountain,or south to happy hamlet",
+        'PATHS': {
+            'NORTH':  "PLEASANT PARK",
+            'WEST': "VIKING MOUNTAIN",
+            'SOUTH': "HAPPY HAMLET"
+        }
+    },
+    'SNOBBY SHORES': {
+        'NAME': "SNOBBY SHORES",
+        'DESCRIPTION': "You are at Snobby Shores. This place has a few modern apartments"
+                      "you can either go east to viking mountain,south to frosty flights, or north to junk junction",
+        'PATHS': {
+            'EAST': "VIKING MOUNTAIN",
+            'SOUTH': "FROSTY FLIGHTS",
+            'NORTH': "JUNK JUNCTION"
+        }
+    },
 
 
 }
@@ -127,8 +163,8 @@ while playing:
     elif command.upper() in directions:
         try:
             room_name = current_node['PATHS'][command.upper()]
-        current_node = world_map[room_name]
+            current_node = world_map[room_name]
         except KeyError:
-        print("I cant go that way")
+            print("I cant go that way")
     else:
         print("Command Not Found")
