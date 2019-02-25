@@ -11,9 +11,9 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CSE$Semester_2_notes.coverage" NAME="Semester 2 notes Coverage Results" MODIFIED="1548349882245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Dictionary_notes.coverage" NAME="Dictionary notes Coverage Results" MODIFIED="1549560296751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$Kaiden_s_Worldmap.coverage" NAME="Kaiden's Worldmap Coverage Results" MODIFIED="1549990865266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Kaiden_s_Worldmap.coverage" NAME="Kaiden's Worldmap Coverage Results" MODIFIED="1551113901551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$World_Map.coverage" NAME="World Map Coverage Results" MODIFIED="1549044782191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$Object_notes.coverage" NAME="Object notes Coverage Results" MODIFIED="1550166278596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Object_notes.coverage" NAME="Object notes Coverage Results" MODIFIED="1551113892543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Kaiden_s_hangman.coverage" NAME="Kaiden's hangman Coverage Results" MODIFIED="1548781703052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -34,7 +34,7 @@
     <session id="-159290083">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.24" value="2" />
@@ -47,7 +47,7 @@
           <entry key="project.open.time.38" value="2" />
           <entry key="project.open.time.40" value="3" />
           <entry key="project.open.time.41" value="2" />
-          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.42" value="2" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.49" value="1" />
@@ -58,7 +58,7 @@
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.68" value="1" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -77,12 +77,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="12539" />
+          <entry key="py" value="13016" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="12539" />
+          <entry key="Python" value="13016" />
         </counts>
       </usages-collector>
     </session>
@@ -94,37 +94,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Kaiden's Worldmap.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="143" column="21" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="21" />
-              <folding>
-                <element signature="e#32#317#0" />
-                <element signature="e#337#644#0" />
-                <element signature="e#668#991#0" />
-                <element signature="e#903#985#0" />
-                <element signature="e#1014#1399#0" />
-                <element signature="e#1072#1257#0" />
-                <element signature="e#1276#1393#0" />
-                <element signature="e#1419#1740#0" />
-                <element signature="e#1474#1634#0" />
-                <element signature="e#1653#1734#0" />
-                <element signature="e#1763#2089#0" />
-                <element signature="e#2112#2435#0" />
-                <element signature="e#2454#2768#0" />
-                <element signature="e#2682#2762#0" />
-                <element signature="e#2791#3088#0" />
-                <element signature="e#2848#2983#0" />
-                <element signature="e#3002#3082#0" />
-                <element signature="e#3110#3394#0" />
-                <element signature="e#3416#3744#0" />
-                <element signature="e#3796#4113#0" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -152,12 +121,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Kaiden's Worldmap.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="33" column="108" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="33" selection-end-column="108" />
+              <folding>
+                <element signature="e#903#985#0" />
+                <element signature="e#1276#1393#0" />
+                <element signature="e#1419#1740#0" />
+                <element signature="e#1474#1634#0" />
+                <element signature="e#1653#1734#0" />
+                <element signature="e#1763#2089#0" />
+                <element signature="e#2112#2435#0" />
+                <element signature="e#2457#2771#0" />
+                <element signature="e#2791#3088#0" />
+                <element signature="e#2848#2983#0" />
+                <element signature="e#3002#3082#0" />
+                <element signature="e#3110#3422#0" />
+                <element signature="e#3453#3785#0" />
+                <element signature="e#3796#4114#0" />
+                <element signature="e#4139#4578#0" />
+                <element signature="e#4601#4985#0" />
+                <element signature="e#5008#5400#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state relative-caret-position="328">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <marker date="1550683178751" expanded="true" signature="19:191" ph="..." />
+                <marker date="1551116714882" expanded="true" signature="19:281" ph="..." />
               </folding>
             </state>
           </provider>
@@ -187,8 +184,8 @@
         <option value="$PROJECT_DIR$/Special_Random.py" />
         <option value="$PROJECT_DIR$/Object notes.py" />
         <option value="$PROJECT_DIR$/Kaiden's object.py" />
-        <option value="$PROJECT_DIR$/World Map OOP.py" />
         <option value="$PROJECT_DIR$/Kaiden's Worldmap.py" />
+        <option value="$PROJECT_DIR$/World Map OOP.py" />
       </list>
     </option>
   </component>
@@ -209,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,6 +222,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,7 +243,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Object notes">
+  <component name="RunManager" selected="Python.Kaiden's Worldmap">
     <configuration name="Dictionary notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -366,8 +363,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Object notes" />
         <item itemvalue="Python.Kaiden's Worldmap" />
+        <item itemvalue="Python.Object notes" />
         <item itemvalue="Python.Dictionary notes" />
         <item itemvalue="Python.World Map" />
         <item itemvalue="Python.Kaiden's hangman" />
@@ -400,12 +397,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.32753405" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.33282906" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.26096824" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32786885" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32786885" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -470,13 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Kaiden's object.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Object notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -488,41 +478,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/World Map OOP.py">
+    <entry file="file://$PROJECT_DIR$/Kaiden's object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding>
-            <marker date="1550683178751" expanded="true" signature="19:191" ph="..." />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Kaiden's Worldmap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="143" column="21" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="21" />
+        <state relative-caret-position="270">
+          <caret line="33" column="108" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="33" selection-end-column="108" />
           <folding>
-            <element signature="e#32#317#0" />
-            <element signature="e#337#644#0" />
-            <element signature="e#668#991#0" />
             <element signature="e#903#985#0" />
-            <element signature="e#1014#1399#0" />
-            <element signature="e#1072#1257#0" />
             <element signature="e#1276#1393#0" />
             <element signature="e#1419#1740#0" />
             <element signature="e#1474#1634#0" />
             <element signature="e#1653#1734#0" />
             <element signature="e#1763#2089#0" />
             <element signature="e#2112#2435#0" />
-            <element signature="e#2454#2768#0" />
-            <element signature="e#2682#2762#0" />
+            <element signature="e#2457#2771#0" />
             <element signature="e#2791#3088#0" />
             <element signature="e#2848#2983#0" />
             <element signature="e#3002#3082#0" />
-            <element signature="e#3110#3394#0" />
-            <element signature="e#3416#3744#0" />
-            <element signature="e#3796#4113#0" />
+            <element signature="e#3110#3422#0" />
+            <element signature="e#3453#3785#0" />
+            <element signature="e#3796#4114#0" />
+            <element signature="e#4139#4578#0" />
+            <element signature="e#4601#4985#0" />
+            <element signature="e#5008#5400#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/World Map OOP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <marker date="1551116714882" expanded="true" signature="19:281" ph="..." />
           </folding>
         </state>
       </provider>
