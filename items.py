@@ -19,10 +19,26 @@ billy_bob_joe = Mini()
 print(billy_bob_joe.quantity)
 
 
-class Shield_Pot(Consumable):
+class ShieldPot(Consumable):
     def __init__(self):
-        super(Shield_Pot, self).__init__("Shield Potion", "A Shield Potion grants you 50 shield points", 1)
-        
+        super(ShieldPot, self).__init__("Shield Potion", "A Shield Potion grants you 50 shield points", 1)
+
 
 class Bandages(Consumable):
+    def __init__(self):
+        super(Bandages, self).__init__("Bandages", "Bandages restore you 15 health points", 5)
+
+
+class Medkits(Consumable):
+    def __init__(self):
+        super(Medkits, self).__init__("Medkits", "Medkits restore all of your health points", 1)
+
+
+class SlurpJuice(Consumable):
+    def __init__(self):
+        super(SlurpJuice, self).__init__("SlurpJuice", "SlurpJuice 25 shield point")
+
+
+
+
 
