@@ -36,7 +36,12 @@ class Medkits(Consumable):
 
 class SlurpJuice(Consumable):
     def __init__(self):
-        super(SlurpJuice, self).__init__("SlurpJuice", "SlurpJuice 25 shield point")
+        super(SlurpJuice, self).__init__("SlurpJuice", "SlurpJuice restores  25 shield point")
+
+
+class Weapons(Item):
+    def __init__(self)
+
 
 
 
