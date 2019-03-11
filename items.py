@@ -40,7 +40,12 @@ class SlurpJuice(Consumable):
 
 
 class Weapons(Item):
-    def __init__(self)
+    def __init__(self, name, description, bullets, damage):
+        super(Item, self).__init__(name)
+        self.description = description
+        self.bullets = ()
+        self.damage = ()
+class
 
 
 
