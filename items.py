@@ -39,16 +39,22 @@ class SlurpJuice(Consumable):
         super(SlurpJuice, self).__init__("SlurpJuice", "SlurpJuice restores  25 shield point")
 
 
-class Weapons(Item):
+class Weapon(Item):
     def __init__(self, name, description, bullets, damage):
         super(Item, self).__init__(name)
         self.description = description
         self.bullets = ()
         self.damage = ()
-class
+        
+        
+class TacticalShotgun(Weapon):
+    def __init__(self):
+        super(TacticalShotgun, self).__init__("Tactical Shotgun", "The tactical shotgun is a rapid firing shotgun,"
+                                              , 8, 74)
 
 
-
-
+class AssaultRifle(Weapon):
+    def __init__(self):
+        super(AssaultRifle, self).__init__("Assault Rifle", "The Assault Rifle is a all around military gun", 30, 33)
 
 
