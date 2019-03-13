@@ -56,5 +56,26 @@ class TacticalShotgun(Weapon):
 class AssaultRifle(Weapon):
     def __init__(self):
         super(AssaultRifle, self).__init__("Assault Rifle", "The Assault Rifle is a all around military gun", 30, 33)
+        
+
+class Character(object):
+    def __init__(self, name, weapon):
+        self.name = name
+        self.weapon = weapon
+
+
+# items
+sword = Weapon("Sword", 10)
+
+
+# characters
+orc = Character("Orcl", 100, sword, Armor("generic armor"))
+
+
+def attack(self, target):
+    print("%s attacks %s for %d" % (self.name, target.name, self.weapon.damage))
+    target.take_damage
+
+
 
 
