@@ -90,6 +90,16 @@ class Scar(Weapon):
         super(Scar, self).__init__("Scar", "The Scar is the best AR in its class, has a high damage too", 30, 36)
 
 
+class PumpShotgun(Weapon):
+    def __init__(self):
+        super(PumpShotgun, self).__init__("Pump Shotgun", "The pump is a reliable medium firing rate shotgun", 5,  105)
+
+
+class Pistol(Weapon):
+    def __init__(self):
+        super(Pistol, self).__init__("Pistol", "The pistol is a small damage medium firing handgun", 16, 23)
+
+
 
 class Character(object):
     def __init__(self, name, weapon):
