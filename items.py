@@ -100,7 +100,6 @@ class Pistol(Weapon):
         super(Pistol, self).__init__("Pistol", "The pistol is a small damage medium firing handgun", 16, 23)
 
 
-
 class Character(object):
     def __init__(self, name, weapon):
         self.name = name
