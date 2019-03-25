@@ -1,11 +1,12 @@
 class Room(object):
-    def __init__(self, name, description="", north=None, south=None, east=None, west=None):
+    def __init__(self, name, description="", north=None, south=None, east=None, west=None, item=None):
         self.name = name
         self.north = north
         self.south = south
         self.east = east
         self.west = west
         self.description = description
+        self.item = item
 
 
 class Player(object):
@@ -130,23 +131,23 @@ class Pistol(Weapon):
 
 
 pistol = Pistol()
-PumpShotgun = PumpShotgun()
-Scar = Scar()
-SilencedSniper = SilencedSniper()
-HeavySniper = HeavySniper()
-P90 = P90()
-SMG = SMG()
-TacticalShotgun = TacticalShotgun()
-AssaultRifle = AssaultRifle()
-Bandages = Bandages()
-Medkits = Medkits()
-ChugJug = ChugJug()
-ShieldPot = ShieldPot()
-SlurpJuice = SlurpJuice()
-Mini = Mini()
+pump_Shotgun = PumpShotgun()
+scar = Scar()
+silenced_Sniper = SilencedSniper()
+heavy_Sniper = HeavySniper()
+p90 = P90()
+sMG = SMG()
+tactical_Shotgun = TacticalShotgun()
+assault_Rifle = AssaultRifle()
+bandages = Bandages()
+med_kits = Medkits()
+chug_Jug = ChugJug()
+shield_Pot = ShieldPot()
+slurp_Juice = SlurpJuice()
+mini = Mini()
 
 
-R19A = Room("Mr. Wiebe's Room", "This is mr wiebe's room", 'parking_lot')
+R19A = Room("Mr. Wiebe's Room", "This is mr wiebe's room", 'parking_lot', None, None, None, mini)
 
 
 parking_lot = Room("Parking Lot", "The parking lot outside", None, "R19A")
@@ -219,3 +220,8 @@ while playing:
             print("I cant go that way")
     else:
         print("Command Not Found")
+
+# Put items in room
+# show items in room
+# pick up item
+# use item
