@@ -32,6 +32,23 @@ class Player(object):
         return globals()[name_of_room]
 
 
+class Character(object):
+    def __init__(self, name, health, weapon):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+
+    def take_damage(self, damage):
+        self.health -= damage
+        if self.health < 0:
+            self.health = 0
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
+
 class Item(object):
     def __init__(self, name):
         self.name = name
@@ -61,17 +78,17 @@ class Bandages(Consumable):
 
 class Medkits(Consumable):
     def __init__(self):
-        super(Medkits, self).__init__("Medkits", "Medkits restore all of your health points", 1)
+        super(Medkits, self).__init__("Medkit", "Medkit restore all of your health points", 1)
 
 
 class SlurpJuice(Consumable):
     def __init__(self):
-        super(SlurpJuice, self).__init__("SlurpJuice", "SlurpJuice restores  25 shield point")
+        super(SlurpJuice, self).__init__("SlurpJuice", "SlurpJuice restores  25 shield point", 1)
 
 
 class ChugJug(Consumable):
     def __abs__(self):
-        super(ChugJug, self).__init__("ChugJug", "ChugJug restores all of your health and shield points")
+        super(ChugJug, self).__init__("ChugJug", "ChugJug restores all of your health and shield points", 1)
 
 
 class Weapon(Item):
@@ -84,8 +101,8 @@ class Weapon(Item):
 
 class TacticalShotgun(Weapon):
     def __init__(self):
-        super(TacticalShotgun, self).__init__("Tactical Shotgun", "The tactical shotgun is a rapid firing shotgun,"
-                                              , 8, 74)
+        super(TacticalShotgun, self).__init__("Tactical Shotgun", "The tactical shotgun is a rapid firing shotgun,", 8,
+                                              74)
 
 
 class AssaultRifle(Weapon):
