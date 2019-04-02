@@ -49,6 +49,19 @@ class Character(object):
         target.take_damage(self.weapon.damage)
 
 
+class SkullTrooper(Character):
+    def __init__(self):
+        super(SkullTrooper, self).__init__("Skull trooper", 200, PumpShotgun)
+
+
+class DefaultBoy(Character):
+    def __abs__(self):
+        super(DefaultBoy, self).__init__("Default Boy", 75, Pistol)
+
+
+
+
+
 class Item(object):
     def __init__(self, name):
         self.name = name
