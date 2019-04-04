@@ -59,9 +59,6 @@ class DefaultBoy(Character):
         super(DefaultBoy, self).__init__("Default Boy", 75, Pistol)
 
 
-
-
-
 class Item(object):
     def __init__(self, name):
         self.name = name
@@ -100,13 +97,13 @@ class SlurpJuice(Consumable):
 
 
 class ChugJug(Consumable):
-    def __abs__(self):
-        super(ChugJug, self).__init__("ChugJug", "ChugJug restores all of your health and shield points", 1)
+    def __init__(self):
+        super(ChugJug, self).__init__("Chug Jug", "ChugJug restores all of your health and shield points", 1)
 
 
 class Weapon(Item):
     def __init__(self, name, description, bullets, damage):
-        super(Item, self).__init__(name)
+        super(Weapon, self).__init__(name)
         self.description = description
         self.bullets = bullets
         self.damage = damage
@@ -180,35 +177,35 @@ mini = Mini()
 R19A = Room("Mr. Wiebe's Room", "This is mr wiebe's room", 'parking_lot', None, None, None, mini)
 
 
-parking_lot = Room("Parking Lot", "The parking lot outside", None, "R19A")
+parking_lot = Room("Parking Lot", "The parking lot outside", None, "R19A", None, None, med_kits)
 
 battle = Room("BATTLE BUS", "You are in the battle bus "
                             "Now you can either go North to Retail Row or south to Paradise Palms ",
-              "retail", "palms")
+              "retail", "palms", None, None, )
 retail = Room("RETAIL ROW", "You are at retail row. if you go south you will be at Paradise Palm. \n"
                             "If you go north you will reach tomato temple",
-              "tomato", "palms")
+              "tomato", "palms", None, None, pistol)
 palms = Room("PARADISE PALMS", "You are at Paradise Palms. Its very dry here with a lot of mountains"
                                "You can either go north to retail row or west to fatal fields",
-             "retail", None, None, "fatal")
+             "retail", None, None, "fatal", TacticalShotgun)
 tomato = Room("TOMATO TEMPLE", "You are at Tomato Temple. This place was a religious sanctuary for tomatoes"
                                "You can either go east to wailing woods, north to the block, or west to lazy links",
-              "block", None, "wailing", "lazy",)
+              "block", None, "wailing", "lazy", Bandages)
 lazy = Room("LAZY LINKS", "You are at Lazy Links. This place has a mansion and alot of golf course"
                           "You can either go west to pleasant park, or east to the block",
-            None, None, "block", "pleasant")
+            None, None, "block", "pleasant", HeavySniper)
 pleasant = Room("PLEASANT PARK", "You are at Pleasant Park. This place is a nice park but isnt pleasant"
                                  "You can go North to junk junction, or south to viking mountain",
-                "junk", "viking",)
+                "junk", "viking", None, None, SilencedSniper)
 junk = Room("JUNK JUNCTION", "You are at junk junction.This place is a trash dump and smells really bad"
                              "You can either go south to Pleasant park or east to lazy links",
-            None, "pleasant", "lazy")
+            None, "pleasant", "lazy", None, ShieldPot)
 block = Room("THE BLOCK", "You are at the block.This place is updated every week with player creations"
                           "You can go south to Wailing Woods,or west to lazy links",
-             None, "wailing", None, "lazy")
+             None, "wailing", None, "lazy", assault_Rifle)
 wailing = Room("WAILING WOODS", "You are at Wailing Woods.This place is a calm forest"
                                 "You can go south to retail row or west to tomato temple",
-               None, "retail", None, "tomato")
+               None, "retail", None, "tomato", None)
 fatal = Room("FATAL FIELDS", "You are at Fatal Fields. This place is a nice little farm ranch"
                              "You can west to happy hamlet or north to salty springs",
              "salty", None, None, "hamlet")
@@ -229,8 +226,6 @@ snobby = Room("SNOBBY SHORES", "You are at Snobby Shores. This place has a few m
                                "you can either go east to viking mountain,south to frosty flights,"
                                " or north to junk junction",
               "junk", "frosty", "viking", None)
-
-
 player = Player(retail)
 
 
@@ -239,6 +234,8 @@ directions = ['north', 'south', 'east', 'west', 'up', 'down']
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+    print(player.current_location.item.name)
+
     command = input(">_")
     if command.lower() in ['q', 'quit' 'exit']:
         playing = False
@@ -248,6 +245,8 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I cant go that way")
+    elif command == "look":
+        print(player.current_location.name, player.current_location.description, player.current_location.item.name)
     else:
         print("Command Not Found")
 
