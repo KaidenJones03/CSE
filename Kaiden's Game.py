@@ -205,27 +205,27 @@ block = Room("THE BLOCK", "You are at the block.This place is updated every week
              None, "wailing", None, "lazy", assault_Rifle)
 wailing = Room("WAILING WOODS", "You are at Wailing Woods.This place is a calm forest"
                                 "You can go south to retail row or west to tomato temple",
-               None, "retail", None, "tomato", None)
+               None, "retail", None, "tomato", bandages)
 fatal = Room("FATAL FIELDS", "You are at Fatal Fields. This place is a nice little farm ranch"
                              "You can west to happy hamlet or north to salty springs",
-             "salty", None, None, "hamlet")
+             "salty", None, None, "hamlet", p90)
 hamlet = Room("HAPPY HAMLET", "You are at happy hamlet. Its really cold here but there is a small town"
                               "You can either go west to frosty flights or north to tilted towers",
               "tilted", None, None, "frosty")
 frosty = Room("FROSTY FLIGHTS", "You are at frosty flights. There are a few airplane hangars"
                                 "You can either go north to viking mountain or east to happy hamlet",
-              "VIKING MOUNTAIN", None, "HAPPY HAMLET", None)
+              "VIKING MOUNTAIN", None, "HAPPY HAMLET", None, heavy_Sniper)
 viking = Room("VIKING MOUNTAIN""You are at Viking Mountain. This is a lost viking camp on a mountain"
                                "You can either go east to tilted towers, west to snobby shores, north to pleasant park"
                                "or south to frosty flights",
               "pleasant", None, "tilted", "snobby")
 tilted = Room("TILTED TOWERS", "You are at Tilted towers. this place is the biggest city on the map"
                                "You can go north to pleasant park,west to viking mountain,or south to happy hamlet",
-              "pleasant", "happy", None, "viking")
+              "pleasant", "happy", None, "viking", scar)
 snobby = Room("SNOBBY SHORES", "You are at Snobby Shores. This place has a few modern apartments"
                                "you can either go east to viking mountain,south to frosty flights,"
                                " or north to junk junction",
-              "junk", "frosty", "viking", None)
+              "junk", "frosty", "viking", None, chug_Jug)
 player = Player(retail)
 
 
@@ -234,7 +234,6 @@ directions = ['north', 'south', 'east', 'west', 'up', 'down']
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
-    print(player.current_location.item.name)
 
     command = input(">_")
     if command.lower() in ['q', 'quit' 'exit']:
