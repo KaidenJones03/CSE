@@ -7,6 +7,7 @@ class Room(object):
         self.west = west
         self.description = description
         self.item = item
+        self.first_time = True
 
 
 class Player(object):
@@ -218,7 +219,7 @@ frosty = Room("FROSTY FLIGHTS", "You are at frosty flights. There are a few airp
 viking = Room("VIKING MOUNTAIN""You are at Viking Mountain. This is a lost viking camp on a mountain"
                                "You can either go east to tilted towers, west to snobby shores, north to pleasant park"
                                "or south to frosty flights",
-              "pleasant", None, "tilted", "snobby")
+              "pleasant", None, "tilted", "snobby", SMG)
 tilted = Room("TILTED TOWERS", "You are at Tilted towers. this place is the biggest city on the map"
                                "You can go north to pleasant park,west to viking mountain,or south to happy hamlet",
               "pleasant", "happy", None, "viking", scar)
@@ -231,9 +232,13 @@ player = Player(retail)
 
 playing = True
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
+command = ''
 while playing:
-    print(player.current_location.name)
-    print(player.current_location.description)
+    if command != 'look':
+        print(player.current_location.name)
+    if player.current_location.first_time:
+        print(player.current_location.description)
+        player.current_location.first_time = False
 
     command = input(">_")
     if command.lower() in ['q', 'quit' 'exit']:
