@@ -181,13 +181,13 @@ R19A = Room("Mr. Wiebe's Room", "This is mr wiebe's room", 'parking_lot', None, 
 parking_lot = Room("Parking Lot", "The parking lot outside", None, "R19A", None, None, med_kits)
 
 battle = Room("BATTLE BUS", "You are in the battle bus "
-                            "Now you can either go North to Retail Row or south to Paradise Palms ",
+                            " Now you can either go North to Retail Row or south to Paradise Palms ",
               "retail", "palms", None, None, )
 retail = Room("RETAIL ROW", "You are at retail row. if you go south you will be at Paradise Palm. \n"
-                            "If you go north you will reach tomato temple",
+                            " If you go north you will reach tomato temple",
               "tomato", "palms", None, None, pistol)
-palms = Room("PARADISE PALMS", "You are at Paradise Palms. Its very dry here with a lot of mountains"
-                               "You can either go north to retail row or west to fatal fields",
+palms = Room("PARADISE PALMS", "You are at Paradise Palms. It's very dry here with a lot of mountains"
+                               " You can either go north to retail row or west to fatal fields",
              "retail", None, None, "fatal", TacticalShotgun)
 tomato = Room("TOMATO TEMPLE", "You are at Tomato Temple. This place was a religious sanctuary for tomatoes"
                                "You can either go east to wailing woods, north to the block, or west to lazy links",

@@ -47,15 +47,16 @@ class ChugJug(Consumable):
 class Weapon(Item):
     def __init__(self, name, description, bullets, damage):
         super(Item, self).__init__(name)
+        self.name = name
         self.description = description
-        self.bullets = ()
-        self.damage = ()
+        self.bullets = bullets
+        self.damage = damage
         
         
 class TacticalShotgun(Weapon):
     def __init__(self):
-        super(TacticalShotgun, self).__init__("Tactical Shotgun", "The tactical shotgun is a rapid firing shotgun,"
-                                              , 8, 74)
+        super(TacticalShotgun, self).__init__("Tactical Shotgun", "The tactical shotgun is a rapid firing shotgun,",
+                                              8, 74)
 
 
 class AssaultRifle(Weapon):
@@ -98,26 +99,3 @@ class PumpShotgun(Weapon):
 class Pistol(Weapon):
     def __init__(self):
         super(Pistol, self).__init__("Pistol", "The pistol is a small damage medium firing handgun", 16, 23)
-
-
-class Character(object):
-    def __init__(self, name, weapon):
-        self.name = name
-        self.weapon = weapon
-
-
-# items
-sword = Weapon("Sword", 10)
-
-
-# characters
-orc = Character("Orcl", 100, sword, Armor("generic armor"))
-
-
-def attack(self, target):
-    print("%s attacks %s for %d" % (self.name, target.name, self.weapon.damage))
-    target.take_damage
-
-
-
-
