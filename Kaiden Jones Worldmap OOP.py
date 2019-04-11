@@ -69,14 +69,14 @@ hamlet = Room("HAPPY HAMLET", "You are at happy hamlet. Its really cold here but
               "tilted", None, None, "frosty")
 frosty = Room("FROSTY FLIGHTS", "You are at frosty flights. There are a few airplane hangars"
                                 "You can either go north to viking mountain or east to happy hamlet",
-              "VIKING MOUNTAIN", None, "HAPPY HAMLET", None)
-viking = Room("VIKING MOUNTAIN""You are at Viking Mountain. This is a lost viking camp on a mountain"
-                               "You can either go east to tilted towers, west to snobby shores, north to pleasant park"
-                               "or south to frosty flights",
+              "viking", None, "hamlet", None)
+viking = Room("VIKING MOUNTAIN", "You are at Viking Mountain.This is a lost viking camp on a mountain"
+                                 "You can either go east to tilted towers,west to snobby shores, north to pleasant park"
+                                 "or south to frosty flights",
               "pleasant", None, "tilted", "snobby")
 tilted = Room("TILTED TOWERS", "You are at Tilted towers. this place is the biggest city on the map"
                                "You can go north to pleasant park,west to viking mountain,or south to happy hamlet",
-              "pleasant", "happy", None, "viking")
+              "pleasant", "hamlet", None, "viking")
 snobby = Room("SNOBBY SHORES", "You are at Snobby Shores. This place has a few modern apartments"
                                "you can either go east to viking mountain,south to frosty flights,"
                                " or north to junk junction",

@@ -240,6 +240,8 @@ while playing:
         print(player.current_location.description)
         player.current_location.first_time = False
 
+        
+
 
     def attack(self, target):
         print("%s attacks %s for %d" % (self.name, target.name, self.weapon.damage))
