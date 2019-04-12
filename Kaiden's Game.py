@@ -188,19 +188,19 @@ retail = Room("RETAIL ROW", "You are at retail row. if you go south you will be 
               "tomato", "palms", None, None, pistol)
 palms = Room("PARADISE PALMS", "You are at Paradise Palms. Its very dry here with a lot of mountains"
                                "You can either go north to retail row or west to fatal fields",
-             "retail", None, None, "fatal", TacticalShotgun)
+             "retail", None, None, "fatal", tactical_Shotgun)
 tomato = Room("TOMATO TEMPLE", "You are at Tomato Temple. This place was a religious sanctuary for tomatoes"
                                "You can either go east to wailing woods, north to the block, or west to lazy links",
-              "block", None, "wailing", "lazy", Bandages)
+              "block", None, "wailing", "lazy", bandages)
 lazy = Room("LAZY LINKS", "You are at Lazy Links. This place has a mansion and alot of golf course"
                           "You can either go west to pleasant park, or east to the block",
-            None, None, "block", "pleasant", HeavySniper)
+            None, None, "block", "pleasant", heavy_Sniper)
 pleasant = Room("PLEASANT PARK", "You are at Pleasant Park. This place is a nice park but isnt pleasant"
                                  "You can go North to junk junction, or south to viking mountain",
-                "junk", "viking", None, None, SilencedSniper)
+                "junk", "viking", None, None, silenced_Sniper)
 junk = Room("JUNK JUNCTION", "You are at junk junction.This place is a trash dump and smells really bad"
                              "You can either go south to Pleasant park or east to lazy links",
-            None, "pleasant", "lazy", None, ShieldPot)
+            None, "pleasant", "lazy", None, shield_Pot)
 block = Room("THE BLOCK", "You are at the block.This place is updated every week with player creations"
                           "You can go south to Wailing Woods,or west to lazy links",
              None, "wailing", None, "lazy", assault_Rifle)
@@ -219,7 +219,7 @@ frosty = Room("FROSTY FLIGHTS", "You are at frosty flights. There are a few airp
 viking = Room("VIKING MOUNTAIN""You are at Viking Mountain. This is a lost viking camp on a mountain"
                                "You can either go east to tilted towers, west to snobby shores, north to pleasant park"
                                "or south to frosty flights",
-              "pleasant", None, "tilted", "snobby", SMG)
+              "pleasant", None, "tilted", "snobby", sMG)
 tilted = Room("TILTED TOWERS", "You are at Tilted towers. this place is the biggest city on the map"
                                "You can go north to pleasant park,west to viking mountain,or south to happy hamlet",
               "pleasant", "happy", None, "viking", scar)
@@ -240,9 +240,6 @@ while playing:
         print(player.current_location.description)
         player.current_location.first_time = False
 
-        
-
-
     def attack(self, target):
         print("%s attacks %s for %d" % (self.name, target.name, self.weapon.damage))
         target.take_damage
@@ -257,8 +254,18 @@ while playing:
             print("I cant go that way")
     elif command == "look":
         print(player.current_location.name, player.current_location.description, player.current_location.item.name)
+    elif command.lower() == "inventory":
+        print("You have the following items:")
+        if len(player.inventory) == 0:
+            print("You have no items")
+        for item in player.inventory:
+            print(item.name)
+    elif command == "take item":
+        player.inventory.append(item)
     else:
         print("Command Not Found")
+    print()
+
 
 # Put items in room
 # show items in room
