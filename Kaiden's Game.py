@@ -261,7 +261,7 @@ while playing:
         for item in player.inventory:
             print(item.name)
     elif command == "take item":
-        player.inventory.append(item)
+        player.inventory.append(player.current_location.item)
     else:
         print("Command Not Found")
     print()
