@@ -11,9 +11,11 @@ class Room(object):
 
 
 class Player(object):
-    def __init__(self, starting_location):
+    def __init__(self, starting_location, shield, health):
         self.current_location = starting_location
         self.inventory = []
+        self.shield = 0
+        self. health = 100
 
     def move(self, new_location):
         """
@@ -66,19 +68,21 @@ class Item(object):
 
 
 class Consumable(Item):
-    def __init__(self, name, description, quantity=1):
+    def __init__(self, name, description, quantity=1,  ):
         super(Consumable, self).__init__(name)
         self.description = description
         self.quantity = quantity
 
 
 class Mini(Consumable):
-    def __init__(self):
+    def __init__(self,):
         super(Mini, self).__init__("Mini Shield", "A mini Shield increases your shield points by 25", 3)
 
 
+
+
 class ShieldPot(Consumable):
-    def __init__(self):
+    def __init__(self,):
         super(ShieldPot, self).__init__("Shield Potion", "A Shield Potion grants you 50 shield points", 1)
 
 
