@@ -14,13 +14,11 @@ class Pistol(object):
 
     def reload(self):
         self.bullets_left = 30
-        self.magazine = True
+        self.clip = True
+        print("Ive reloaded my pistol, Now i have 18 bullets in my clip")
 
 
-print("Ive reloaded my pistol, Now i have 18 bullets in my clip")
-
-
-gun = Pistol(name =Pistol, soldier=True)
+gun = Pistol(name=Pistol, soldier=True)
 gun.push_trigger()
 gun.push_trigger()
 gun.push_trigger()
@@ -35,5 +33,3 @@ gun.push_trigger()
 gun.push_trigger()
 gun.push_trigger()
 gun.reload()
-
-

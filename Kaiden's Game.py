@@ -15,7 +15,8 @@ class Player(object):
         self.current_location = starting_location
         self.inventory = []
         self.shield = 0
-        self. health = 100
+        self.health = 100
+
 
     def move(self, new_location):
         """
@@ -79,11 +80,10 @@ class Mini(Consumable):
         super(Mini, self).__init__("Mini Shield", "A mini Shield increases your shield points by 25", 3)
 
 
-
-
 class ShieldPot(Consumable):
     def __init__(self,):
         super(ShieldPot, self).__init__("Shield Potion", "A Shield Potion grants you 50 shield points", 1)
+        if command
 
 
 class Bandages(Consumable):
@@ -269,6 +269,10 @@ while playing:
     else:
         print("Command Not Found")
     print()
+    if shield_Pot in player.inventory:
+
+
+
 
 
 # Put items in room
