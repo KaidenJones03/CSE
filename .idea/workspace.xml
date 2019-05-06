@@ -34,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kaiden's Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
+            <state relative-caret-position="4624">
               <caret line="272" selection-start-line="272" selection-end-line="272" />
             </state>
           </provider>
@@ -62,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/validator backup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -87,8 +87,8 @@
         <option value="$PROJECT_DIR$/notes/Book1 CSV" />
         <option value="$PROJECT_DIR$/Kaiden's object.py" />
         <option value="$PROJECT_DIR$/Kaiden's Game.py" />
-        <option value="$PROJECT_DIR$/notes/validator backup.py" />
         <option value="$PROJECT_DIR$/notes/Validator Kaiden.py" />
+        <option value="$PROJECT_DIR$/notes/validator backup.py" />
       </list>
     </option>
   </component>
@@ -103,6 +103,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,7 +120,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,23 +227,24 @@
       <option name="presentableId" value="Default" />
       <updated>1556809313205</updated>
       <workItem from="1556809318189" duration="6047000" />
-      <workItem from="1556903137307" duration="2179000" />
+      <workItem from="1556903137307" duration="2197000" />
+      <workItem from="1557158061421" duration="1819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12320000" />
+    <option name="totallyTimeSpent" value="14157000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.18783352" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837133" visible="true" weight="0.13607258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.50161815" side_tool="true" visible="true" weight="0.18783352" />
+      <window_info id="Favorites" order="2" sideWeight="0.50162864" side_tool="true" weight="0.18783352" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -278,6 +279,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Kaiden's Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4624">
+          <caret line="272" selection-start-line="272" selection-end-line="272" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Kaiden Jones CSVNOTES.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -295,20 +303,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Kaiden's Game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="272" selection-start-line="272" selection-end-line="272" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notes/Validator Kaiden.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/validator backup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
