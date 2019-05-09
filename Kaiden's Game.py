@@ -83,7 +83,8 @@ class Mini(Consumable):
 class ShieldPot(Consumable):
     def __init__(self,):
         super(ShieldPot, self).__init__("Shield Potion", "A Shield Potion grants you 50 shield points", 1)
-        if command
+        if command == 'drink shield pot':
+
 
 
 class Bandages(Consumable):
