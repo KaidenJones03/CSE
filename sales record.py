@@ -24,7 +24,7 @@ with open("Sales Records.csv", 'r') as old_csv:
             clothes_totals += float(profit)
         if item_type == 'Meat':
             meat_totals += float(profit)
-        if item_type == 'Beverage':
+        if item_type == 'Beverages':
             beverage_totals += float(profit)
         if item_type == 'Baby Food':
             baby_food_totals += float(profit)
@@ -32,7 +32,7 @@ with open("Sales Records.csv", 'r') as old_csv:
             office_supplies_totals += float(profit)
         if item_type == 'Cosmetics':
             Cosmetics_totals += float(profit)
-        if item_type == 'HouseHold':
+        if item_type == 'Household':
             Household_totals += float(profit)
         if item_type == 'Cereal':
             Cereal_totals += float(profit)
@@ -42,23 +42,24 @@ with open("Sales Records.csv", 'r') as old_csv:
             Vegetables_totals += float(profit)
         if item_type == 'Snacks':
             Snacks_totals += float(profit)
-    print(clothes_totals)
-    print(fruit_totals)
-    print(meat_totals)
-    print(beverage_totals)
-    print(baby_food_totals)
-    print(office_supplies_totals)
-    print(Cosmetics_totals)
-    print(Household_totals)
-    print(Cereal_totals)
-    print(Personal_Care_totals)
-    print(Vegetables_totals)
-    print(Snacks_totals)
+    print("clothes profit:", clothes_totals)
+    print("fruit profit:", fruit_totals)
+    print("meat profit:", meat_totals)
+    print("beverage profit:", beverage_totals)
+    print("baby food profit:", baby_food_totals)
+    print("office supplies profit:", office_supplies_totals)
+    print("cosmetics profit:", Cosmetics_totals)
+    print("household profit:", Household_totals)
+    print("cereal profit:", Cereal_totals)
+    print("personal care profit:", Personal_Care_totals)
+    print("vegetable:", Vegetables_totals)
+    print("snacks profit:", Snacks_totals)
 
 
-
-
-
-
-
-
+list_of_profits = [clothes_totals, fruit_totals, meat_totals, beverage_totals, baby_food_totals, office_supplies_totals
+                   , Cosmetics_totals, Household_totals, Cereal_totals, Personal_Care_totals, Vegetables_totals,
+                   Snacks_totals]
+list_of_items = ["Clothes", "Fruit", "Meat", "Beverages", "baby food", "office supplies", "cosmetics", "household",
+                 "cereal", "personal care", "vegetable", "snacks"]
+index_of_item = list_of_profits.index(max(list_of_profits))
+print(list_of_items[index_of_item], max(list_of_profits))
