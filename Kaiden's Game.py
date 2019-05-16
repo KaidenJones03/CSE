@@ -11,12 +11,11 @@ class Room(object):
 
 
 class Player(object):
-    def __init__(self, starting_location, shield, health):
+    def __init__(self, starting_location,):
         self.current_location = starting_location
         self.inventory = []
         self.shield = 0
         self.health = 100
-
 
     def move(self, new_location):
         """
@@ -37,10 +36,11 @@ class Player(object):
 
 
 class Character(object):
-    def __init__(self, name, health, weapon):
+    def __init__(self, name, health, shield, weapon):
         self.name = name
         self.health = health
         self.weapon = weapon
+        self.shield = shield
 
     def take_damage(self, damage):
         self.health -= damage
@@ -55,12 +55,17 @@ class Character(object):
 
 class SkullTrooper(Character):
     def __init__(self):
-        super(SkullTrooper, self).__init__("Skull trooper", 200, PumpShotgun)
+        super(SkullTrooper, self).__init__("Skull trooper", 100, 100, PumpShotgun)
 
 
 class DefaultBoy(Character):
-    def __abs__(self):
-        super(DefaultBoy, self).__init__("Default Boy", 75, Pistol)
+    def __init__(self):
+        super(DefaultBoy, self).__init__("Default Boy", 75, 0, Pistol)
+
+
+class TomatoHead(Character):
+    def __init__(self):
+        super(TomatoHead, self).__init__("Tomato Head", 100, 50, SMG)
 
 
 class Item(object):
@@ -69,7 +74,7 @@ class Item(object):
 
 
 class Consumable(Item):
-    def __init__(self, name, description, quantity=1,  ):
+    def __init__(self, name, description, quantity=1,):
         super(Consumable, self).__init__(name)
         self.description = description
         self.quantity = quantity
@@ -83,8 +88,6 @@ class Mini(Consumable):
 class ShieldPot(Consumable):
     def __init__(self,):
         super(ShieldPot, self).__init__("Shield Potion", "A Shield Potion grants you 50 shield points", 1)
-        if command == 'drink shield pot':
-
 
 
 class Bandages(Consumable):
@@ -247,7 +250,6 @@ while playing:
 
     def attack(self, target):
         print("%s attacks %s for %d" % (self.name, target.name, self.weapon.damage))
-        target.take_damage
     command = input(">_")
     if command.lower() in ['q', 'quit' 'exit']:
         playing = False
@@ -270,12 +272,6 @@ while playing:
     else:
         print("Command Not Found")
     print()
-    if shield_Pot in player.inventory:
-
-
-
-
-
 # Put items in room
 # show items in room
 # pick up item
