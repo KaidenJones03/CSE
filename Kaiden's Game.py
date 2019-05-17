@@ -1,5 +1,5 @@
 class Room(object):
-    def __init__(self, name, description="", north=None, south=None, east=None, west=None, item=None):
+    def __init__(self, name, description="", north=None, south=None, east=None, west=None, item=None, character=None):
         self.name = name
         self.north = north
         self.south = south
@@ -8,6 +8,7 @@ class Room(object):
         self.description = description
         self.item = item
         self.first_time = True
+        self.character = character
 
 
 class Player(object):
@@ -199,7 +200,7 @@ palms = Room("PARADISE PALMS", "You are at Paradise Palms. Its very dry here wit
              "retail", None, None, "fatal", tactical_Shotgun)
 tomato = Room("TOMATO TEMPLE", "You are at Tomato Temple. This place was a religious sanctuary for tomatoes"
                                "You can either go east to wailing woods, north to the block, or west to lazy links",
-              "block", None, "wailing", "lazy", bandages)
+              "block", "retail", "wailing", "lazy", bandages)
 lazy = Room("LAZY LINKS", "You are at Lazy Links. This place has a mansion and alot of golf course"
                           "You can either go west to pleasant park, or east to the block",
             None, None, "block", "pleasant", heavy_Sniper)
@@ -261,6 +262,10 @@ while playing:
             print("I cant go that way")
     elif command == "look":
         print(player.current_location.name, player.current_location.description, player.current_location.item.name)
+        if player.current_location is not None:
+            print("Item:", player.current_location.item.name)
+
+
     elif command.lower() == "inventory":
         print("You have the following items:")
         if len(player.inventory) == 0:
