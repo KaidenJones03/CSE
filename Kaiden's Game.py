@@ -12,11 +12,12 @@ class Room(object):
 
 
 class Player(object):
-    def __init__(self, starting_location,):
+    def __init__(self, starting_location, weapon ):
         self.current_location = starting_location
         self.inventory = []
         self.shield = 0
         self.health = 100
+        self.weapon = weapon
 
     def move(self, new_location):
         """
@@ -69,6 +70,26 @@ class TomatoHead(Character):
         super(TomatoHead, self).__init__("Tomato Head", 100, 50, SMG)
 
 
+class Omega(Character):
+    def __init__(self):
+        super(Omega, self).__init__("Omega", 75, 25, TacticalShotgun)
+
+
+class Bananaman(Character):
+    def __init__(self):
+        super(Bananaman, self).__init__("Banana man", 30, 100, p90)
+
+
+class Rogue_Agent(Character):
+    def __init__(self):
+        super(Rogue_Agent, self).__init__("Rogue Agent", 75, 50, HeavySniper)
+
+
+class Whiteout (Character):
+    def __init__(self):
+        super(Whiteout, self).__init__("Whiteout", 40, 90, silenced_Sniper)
+
+
 class Item(object):
     def __init__(self, name):
         self.name = name
@@ -93,7 +114,7 @@ class ShieldPot(Consumable):
 
 class Bandages(Consumable):
     def __init__(self):
-        super(Bandages, self).__init__("Bandages", "Bandages restore you 15 health points", 5)
+        super(Bandages, self).__init__("Bandage", "Bandages restore you 15 health points", 5)
 
 
 class Medkits(Consumable):
@@ -194,10 +215,10 @@ battle = Room("BATTLE BUS", "You are in the battle bus "
               "retail", "palms", None, None, )
 retail = Room("RETAIL ROW", "You are at retail row. if you go south you will be at Paradise Palm. \n"
                             "If you go north you will reach tomato temple",
-              "tomato", "palms", None, None, pistol)
+              "tomato", "palms", None, None, pistol,)
 palms = Room("PARADISE PALMS", "You are at Paradise Palms. Its very dry here with a lot of mountains"
                                "You can either go north to retail row or west to fatal fields",
-             "retail", None, None, "fatal", tactical_Shotgun)
+             "retail", None, None, "fatal", tactical_Shotgun, SkullTrooper)
 tomato = Room("TOMATO TEMPLE", "You are at Tomato Temple. This place was a religious sanctuary for tomatoes"
                                "You can either go east to wailing woods, north to the block, or west to lazy links",
               "block", "retail", "wailing", "lazy", bandages)
@@ -206,7 +227,7 @@ lazy = Room("LAZY LINKS", "You are at Lazy Links. This place has a mansion and a
             None, None, "block", "pleasant", heavy_Sniper)
 pleasant = Room("PLEASANT PARK", "You are at Pleasant Park. This place is a nice park but isnt pleasant"
                                  "You can go North to junk junction, or south to viking mountain",
-                "junk", "viking", None, None, silenced_Sniper)
+                "junk", "viking", None, None, silenced_Sniper, TomatoHead)
 junk = Room("JUNK JUNCTION", "You are at junk junction.This place is a trash dump and smells really bad"
                              "You can either go south to Pleasant park or east to lazy links",
             None, "pleasant", "lazy", None, shield_Pot)
@@ -218,25 +239,25 @@ wailing = Room("WAILING WOODS", "You are at Wailing Woods.This place is a calm f
                None, "retail", None, "tomato", bandages)
 fatal = Room("FATAL FIELDS", "You are at Fatal Fields. This place is a nice little farm ranch"
                              "You can west to happy hamlet or north to salty springs",
-             "salty", None, None, "hamlet", p90)
+             "salty", None, None, "hamlet", p90, Rogue_Agent)
 hamlet = Room("HAPPY HAMLET", "You are at happy hamlet. Its really cold here but there is a small town"
                               "You can either go west to frosty flights or north to tilted towers",
-              "tilted", None, None, "frosty")
+              "tilted", None, None, "frosty", pump_Shotgun, Omega)
 frosty = Room("FROSTY FLIGHTS", "You are at frosty flights. There are a few airplane hangars"
                                 "You can either go north to viking mountain or east to happy hamlet",
               "VIKING MOUNTAIN", None, "HAPPY HAMLET", None, heavy_Sniper)
 viking = Room("VIKING MOUNTAIN""You are at Viking Mountain. This is a lost viking camp on a mountain"
                                "You can either go east to tilted towers, west to snobby shores, north to pleasant park"
                                "or south to frosty flights",
-              "pleasant", None, "tilted", "snobby", sMG)
+              "pleasant", None, "tilted", "snobby", sMG, )
 tilted = Room("TILTED TOWERS", "You are at Tilted towers. this place is the biggest city on the map"
                                "You can go north to pleasant park,west to viking mountain,or south to happy hamlet",
-              "pleasant", "happy", None, "viking", scar)
+              "pleasant", "happy", None, "viking", scar, DefaultBoy)
 snobby = Room("SNOBBY SHORES", "You are at Snobby Shores. This place has a few modern apartments"
                                "you can either go east to viking mountain,south to frosty flights,"
                                " or north to junk junction",
-              "junk", "frosty", "viking", None, chug_Jug)
-player = Player(retail)
+              "junk", "frosty", "viking", None, chug_Jug, Whiteout)
+player = Player(retail, None)
 
 
 playing = True
@@ -248,6 +269,8 @@ while playing:
     if player.current_location.first_time:
         print(player.current_location.description)
         player.current_location.first_time = False
+
+    total_players_alive = 5
 
     def attack(self, target):
         print("%s attacks %s for %d" % (self.name, target.name, self.weapon.damage))
@@ -265,7 +288,6 @@ while playing:
         if player.current_location is not None:
             print("Item:", player.current_location.item.name)
 
-
     elif command.lower() == "inventory":
         print("You have the following items:")
         if len(player.inventory) == 0:
@@ -274,9 +296,38 @@ while playing:
             print(item.name)
     elif command == "take item":
         player.inventory.append(player.current_location.item)
+
+    elif command.lower() == "drink shield pot" and shield_Pot in player.inventory:
+        player.shield += 50
+        print("you have", player.shield, "shield" and player.health, "health")
+
+    elif command.lower() == "use bandage" and bandages in player.inventory:
+        player.health += 15
+        print("you have", player.shield, "shield", "and", player.health, "health")
+
+    elif command.lower() == "use chug jug" and chug_Jug in player.inventory:
+        player.health = 100
+        player.shield = 100
+        print("you have", player.shield, "shield", "and", player.health, "health")
+
+    elif command.lower() == "use med kit" and med_kits in player.inventory:
+        player.health = 100
+        print("you have", player.shield, "shield", "and", player.health, "health")
+
+    elif command.lower() == "use mini" and mini in player.inventory:
+        player.shield += 25
+        print("you have", player.shield, "shield", "and", player.health, "health")
+
+    elif command.lower() == "use slurp juice" and slurp_Juice in player.inventory:
+        player.shield += 25
+        player.health += 75
+        print("you have", player.shield, "shield", "and", player.health, "health")
+
     else:
         print("Command Not Found")
-    print()
+
+
+
 # Put items in room
 # show items in room
 # pick up item
